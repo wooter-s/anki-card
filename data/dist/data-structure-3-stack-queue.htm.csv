@@ -1,0 +1,50 @@
+单选(2分)元素A、B、C、D依次进栈后，栈顶元素是{{c1::D}}_。,<div>D</div><div>C</div><div>B</div><div>A</div>
+"单选(2分)经过以下运算后，x的值是{{c1::a}}_。InitStack(s);Push(s,a);Push(s,b);Pop(s,x);GetTop(s,x)",<div>a</div><div>b</div><div>1</div><div>0</div>
+"单选(2分)经过以下栈运算后，StackEmpty(s)的值是{{c1::1}}_。InitStack(s);Push(s,a);Push(s,b);Pop(s,x);Pop(s,y)",<div>1</div><div>0</div><div>a</div><div>b</div>
+"单选(2分)已知一个栈的进栈序列是ABC，出栈序列为CBA，经过栈的操作是{{c1::push, push, push, pop, pop, pop}}_。","<div>push, push, push, pop, pop, pop</div><div>push,pop,push,pop,push,pop</div><div>push, push,pop, pop,push,pop</div><div>push,pop,push, push,pop, pop</div>"
+单选(2分)若元素a、b、c、d、e、f依次进栈，允许进栈、退栈的操作交替进行，但不允许连续3次退栈工作，则不可能得到的出栈序列是{{c1::afedcb}}_。,<div>afedcb</div><div>cbdaef</div><div> bcaefd</div><div>dcebfa</div>
+单选(2分)设一个栈的输入序列为A、B、C、D，则借助一个栈所得的输出序列不可能是{{c1::DABC}}_。,<div>DABC</div><div>ACDB</div><div>DCBA</div><div>ABCD</div>
+单选(2分)一个栈的进栈序列是abcde，则栈的不可能的输出序列是{{c1::dceab}}_。,<div>dceab</div><div>decba</div><div>edcba</div><div>abcde</div>
+单选(2分)已知一个栈的进栈序列是1，2，3，…n，其输出序列的第一个元素是i（1≤i≤n），则第j（1≤j≤n）个出栈元素是{{c1::不确定}}_。,<div>不确定</div><div>n-i</div><div>i</div><div>j-i+1</div>
+"单选(2分)已知一个栈的进栈序列是1,2,3，…n，其输出序列是p1,p2,…pn，若p1=n,则pi的值是{{c1::n-i+1}}_。",<div>n-i+1</div><div>i</div><div>n-i</div><div>不确定</div>
+"单选(2分)设n个元素的进栈序列是p1,p2,…pn，其输出序列是1,2,3，…n，若pn=1，则pi（1≤i≤n-1）的值是{{c1::n-i+1}}_。",<div>n-i+1</div><div>不确定</div><div>i</div><div>n-i</div>
+"单选(2分)设n个元素的进栈序列是1,2,3，…n，其输出序列是p1,p2,…pn，若p1=3，则p2的值是{{c1::不可能是1}}_。",<div>不可能是1</div><div>以上都不对</div><div>一定是1</div><div>一定是2</div>
+"单选(2分)设n个元素的进栈序列是p1,p2,…pn，其输出序列是1,2,3，…n，若p3=1，则p1的值是{{c1::不可能是2}}_。",<div>不可能是2</div><div>不可能是3</div><div>一定是2</div><div>可能是2</div>
+"单选(2分)设n个元素的进栈序列是p1,p2,…pn，其输出序列是1,2,3，…n，若p3=3，则p1的值是{{c1::可能是2}}_。",<div>可能是2</div><div>不可能是1</div><div>一定是2</div><div>一定是1</div>
+单选(2分)设有5个元素的进栈序列是a，b，c，d，e，其输出序列是c，e，d，b，a，则该栈的容量至少是{{c1::4}}_。,<div>4</div><div>3</div><div>1</div><div>2</div>
+单选(2分)在数据处理过程中常需要保存一些中间数据，如果后保存的数据先处理，则使用{{c1::栈}}_来保存这些数据。,<div>栈</div><div>单链表</div><div>线性表</div><div>队列</div>
+单选(2分)判定一个顺序栈st为（元素个数最多为MaxSize）空的条件为 {{c1::st.top==-1}}_。,<div>st.top==-1</div><div>st.top==MaxSize</div><div>st.top!=MaxSize</div><div> st.top!=-1</div>
+单选(2分)判定一个顺序栈st为（元素个数最多为MaxSize）为栈满的条件为 {{c1::st.top==MaxSize-1}}_。,<div>st.top==MaxSize-1</div><div>st.top!=MaxSize-1</div><div>st.top=-1</div><div> st.top！==-1 </div>
+单选(2分)表达式a*(b+c)-d的后缀表达式是{{c1::a b c + * d -}}_。,<div>a b c + * d -</div><div>a b c * + d - </div><div>- + * a b c d </div><div>a b c d * + -</div>
+单选(2分)若一个栈用数组data[1..n]存储，初始栈顶指针top为n+1，则以下元素x进入栈的正确操作是{{c1::top--; data[top]=x;}}_。,<div>top--; data[top]=x;</div><div>data[top]=x;top++;</div><div>top++; data[top]=x;</div><div>data[top]=x;top--;</div>
+单选(2分)若一个栈用数组data[1..n]存储，初始栈顶指针top为n，则以下元素x进入栈的正确操作是{{c1:: data[top]=x;top--;}}_。,<div> data[top]=x;top--;</div><div>data[top]=x;top++;</div><div>top--; data[top]=x;</div><div>top++; data[top]=x;</div>
+单选(2分)若一个栈用数组data[1..n]存储，初始栈顶指针top为0，则以下元素x进入栈的正确操作是{{c1::top++; data[top]=x; }}_。,<div>top++; data[top]=x; </div><div>top--; data[top]=x; </div><div> data[top]=x;top++;</div><div>data[top]=x;top--;</div>
+单选(2分)若一个栈用数组data[1..n]存储，初始栈顶指针top为1，则以下元素x进入栈的正确操作是{{c1::data[top]=x;top++;}}_。,<div>data[top]=x;top++;</div><div>top--; data[top]=x;</div><div>data[top]=x;top--;</div><div>top++; data[top]=x; </div>
+单选(2分)链栈与顺序栈相比有一个明显的优点，即{{c1::通常不会出现栈满的情况}}_。,<div>通常不会出现栈满的情况</div><div>插入操作更方便</div><div>总是不会出现栈空的情况</div><div>删除操作更加方便</div>
+单选(2分)以下各链表均不带有头节点，其中最不合适用作链栈的链表是{{c1::只有表头指针没有表尾指针的循环单链表}}_。,<div>只有表头指针没有表尾指针的循环单链表</div><div>只有表头指针没有表尾指针的循环双链表</div><div>只有表尾指针没有表头指针的循环双链表</div><div>只有表尾指针没有表头指针的循环单链表</div>
+单选(2分)如果以链表作为栈的存储结构，则退栈操作时{{c1::必须判断链栈是否空}}_。,<div>必须判断链栈是否空</div><div>必须判断链栈是否为满</div><div>判断链栈元素的类型</div><div>对链栈不做任何判断</div>
+单选(2分)向一个不带头节点的栈顶指针为lst的链栈中插入一个s所指向节点时，则执行{{c1::s->next=lst; lst=s; }}_。,<div>s->next=lst; lst=s; </div><div>s->next=lst;  lst->next=s;</div><div>lst->next = s;</div><div> s->next=lst->next;  lst->next=s;</div>
+单选(2分)从一个不带头节点的栈顶指针为lst的栈链中删除一个节点时，用x保存被删节点的值，则执行{{c1::x=lst->data;  lst= lst->next;}}_。,<div>x=lst->data;  lst= lst->next;</div><div>x=lst->data</div><div> x=lst;  lst = lst->next ;</div><div>lst=lst->next;  x=lst->data;</div>
+单选(2分)栈和队列的不同点是{{c1::栈只能在一端进行插入删除操作，而队列在不同端进行插入删除操作}}_。,<div>栈只能在一端进行插入删除操作，而队列在不同端进行插入删除操作</div><div>都是线性表</div><div>没有不同点</div><div>都不是线性表</div>
+"单选(2分)经过下列运算后，队头的元素是{{c1::b}}_。InitQueue(qu);Enqueue(qu,‘a’);EnQueue(qu,‘b’);EnQueue(qu,‘c’);DeQueue(qu);",<div>b</div><div>1</div><div>0</div><div>a</div>
+单选(2分)若某循环队列有队首指针front和队尾指针rear，在队不满时进队操作仅会改变{{c1:: rear}}_。,<div> rear</div><div>以上都不对</div><div>front</div><div>front和rear </div>
+单选(2分)循环队列qu的队满条件（front队首指针指向队首元素的前一位置，rear队尾指针指向队尾元素）是{{c1::(qu.rear+1)%maxsize==qu.front}}_。,<div>(qu.rear+1)%maxsize==qu.front</div><div>qu.rear==qu.front</div><div>(qu.rear+1)%maxsize==qu.front+1</div><div>(qu.rear+1)%maxsize==(qu.front+1)%maxsize</div>
+单选(2分)设循环队列中数组的下标是0~N-1，其队头、队尾指针分别为f和r（f指向队首元素的前一位置，r指向队尾元素），则元素个数为{{c1::(r-f+N)%N}}_。,<div>(r-f+N)%N</div><div> r-f-1</div><div>(r-f)%N+1</div><div> r-f</div>
+单选(2分)最适合用做链队列的不带表头节点的链表是{{c1::只带尾节点指针的循环单链表}}_。,<div>只带尾节点指针的循环单链表</div><div>带首节点指针和尾节点指针的循环单链表</div><div>只带尾节点指针的非循环单链表</div><div>只带首节点指针的非循环单链表</div>
+单选(2分)假设用一个不带表头节点的单链表表示队列，在进行删除操作时，{{c1::头、尾指针可能都要修改}}_。,<div>头、尾指针可能都要修改</div><div>头、尾指针都要修改 </div><div>仅修改头指针</div><div>仅修改尾指针</div>
+单选(2分)假设用一个不带头节点的单链表表示队列，队头和队尾指针分别为front和rear，则判断队空的条件是{{c1::front == NULL}}_。,<div>front == NULL</div><div> front == rear</div><div> front!==NULL</div><div> rear!==NULL</div>
+单选(2分)最不合适用做链队的不带头节点的链表是{{c1::只带队首节点指针的非循环单链表}}_。,<div>只带队首节点指针的非循环单链表</div><div>以上都不合适</div><div>只带队首节点指针的循环双链表</div><div>只带队尾节点指针的循环双链表</div>
+单选(2分)假设用qu[0..M]实现循环队列，f、r分别为队首元素的前一个位置和队尾位置。若用“(r+1)%(M+1)==f”作为队满的标志，则{{c1::可用“f==r”作为队空的标志}}_。,<div>可用“f==r”作为队空的标志</div><div>可用“(f+1)%(M+1)==r”作为队空的标志</div><div>队列中最多可以有M+1个元素</div><div>可用“f > r”作为队空的标志</div>
+单选(2分)若用一个大小为6的数组来实现循环队列，且当前rear和front的值分别是0和3，当从队列中删除一个元素，再加入两个元素后，rear和front的值分别是{{c1::2和4 }}_。,<div>2和4 </div><div>4和2</div><div>5和1</div><div>1和5</div>
+判断(2分)栈底元素是不能删除的元素。{{c1::正确}},<div>正确</div><div>错误</div>
+判断(2分)顺序栈中元素值的大小是有序的。{{c1::错误}},<div>错误</div><div>正确</div>
+判断(2分)n个元素依次进栈，它们的出栈顺序和进栈顺序一定正好相反。{{c1::错误}},<div>错误</div><div>正确</div>
+判断(2分)栈顶元素和栈底有可能是同一元素。{{c1::错误}},<div>错误</div><div>正确</div>
+判断(2分)若用s[0..m-1]表示顺序栈的存储空间，则对栈的进栈、出栈操作最多只能进行m次；{{c1::正确}},<div>正确</div><div>错误</div>
+判断(2分)栈是一种对进栈、出栈操作总次数做了限制的线性表。{{c1::正确}},<div>正确</div><div>错误</div>
+判断(2分)栈是一种对进栈、出栈操作的次序做了限制的线性表。{{c1::正确}},<div>正确</div><div>错误</div>
+判断(2分)对顺序栈进行进栈、出栈操作，不涉及元素的前、后移动问题。{{c1::错误}},<div>错误</div><div>正确</div>
+判断(2分)空栈没有栈顶指针。{{c1::错误}},<div>错误</div><div>正确</div>
+判断(2分)栈和队列都是限制存取端的。{{c1::正确}},<div>正确</div><div>错误</div>
+判断(2分)队列是一种对进队、出队操作的次序做了限制的线性表。{{c1::正确}},<div>正确</div><div>错误</div>
+判断(2分)若用“队首指针的值和队尾指针的值相等”作为循环顺序队为空的标识，则在设置一个空队列时，只需给队首指针和队尾指针赋同一个值，在顺序表地址范围内不管什么值都可以。{{c1::错误}},<div>错误</div><div>正确</div>

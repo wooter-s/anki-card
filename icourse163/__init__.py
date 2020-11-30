@@ -46,16 +46,16 @@ class Icourse163:
                     rowData.append(optionContent)
             data.append(rowData)
 
-        print(f'len(data) ----> {len(data)}')
-        print(f'data -> {data}')
+        print(f'len(icourse163) ----> {len(data)}')
+        print(f'icourse163 -> {data}')
 
-        with open('data/' + self.path + '.csv', 'a+') as file:
+        with open('icourse163/' + self.path + '.csv', 'a+') as file:
             csv_write = csv.writer(file)
             for rowData in data:
                 csv_write.writerow(rowData)
 
     def generate_anki_card(self):
-        with open('data/' + self.path + '.csv', 'r') as file:
+        with open('icourse163/' + self.path + '.csv', 'r') as file:
             csv_reader = csv.reader(file)
             with open('dist/' + self.path + '.csv', 'a+') as dist:
                 dist_write = csv.writer(dist)
@@ -107,7 +107,7 @@ class Icourse163:
 
 
 #
-# data = []
+# icourse163 = []
 # for ele in elems:
 #     rowData = []
 #     titleElement = ele.select(".qaDescription")
@@ -140,13 +140,13 @@ class Icourse163:
 #         else:
 #             rowData[1] = 'radio'
 #             rowData.append(optionContent)
-#     data.append(rowData)
+#     icourse163.append(rowData)
 #
-# print(f'len(data) ----> {len(data)}')
-# print(f'data -> {data}')
+# print(f'len(icourse163) ----> {len(icourse163)}')
+# print(f'icourse163 -> {icourse163}')
 #
 # filePath = 'test.csv'
 # with open(filePath, 'a+') as file:
 #     csv_write = csv.writer(file)
-#     for rowData in data:
+#     for rowData in icourse163:
 #         csv_write.writerow(rowData)

@@ -1,7 +1,7 @@
 import os
 import shutil
 
-from data import Icourse163
+from icourse163 import Icourse163
 
 print(os.listdir('./html'))
 

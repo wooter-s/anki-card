@@ -29,17 +29,19 @@ class Icourse163:
             # 答案
             rowData.append(answer)
             for choice in choices[0]:
-                optionContent = choice.select('.optionCnt')[0].get_text()
+                option_first = choice.select('.optionCnt')[0]
+                optionContent = option_first.get_text()
 
                 # 如果没有选项内容，使用选项；这是判断题
                 if not optionContent:
                     option = choice.select('.optionPos')[0].get_text().replace(".", "")
-                    if option == 'A':
+                    icon_class = option_first.span["class"][0]
+                    if icon_class == 'u-icon-correct':
                         rowData.append('正确')
-                    elif option == 'B':
-                        rowData.append('错误')
+                    # elif option == 'u-icon-wrong':
+                    #     rowData.append('错误')
                     else:
-                        rowData.append(option)
+                        rowData.append("错误")
                     rowData[1] = 'tof'
                 else:
                     rowData[1] = 'radio'
@@ -49,13 +51,13 @@ class Icourse163:
         print(f'len(icourse163) ----> {len(data)}')
         print(f'icourse163 -> {data}')
 
-        with open('icourse163/' + self.path + '.csv', 'a+') as file:
+        with open('data/' + self.path + '.csv', 'a+') as file:
             csv_write = csv.writer(file)
             for rowData in data:
                 csv_write.writerow(rowData)
 
     def generate_anki_card(self):
-        with open('icourse163/' + self.path + '.csv', 'r') as file:
+        with open('data/' + self.path + '.csv', 'r') as file:
             csv_reader = csv.reader(file)
             with open('dist/' + self.path + '.csv', 'a+') as dist:
                 dist_write = csv.writer(dist)

@@ -1,0 +1,17 @@
+前端安全1.iframe 2.opener 3.CSRF（跨站请求伪造） 4.XSS（跨站脚本攻击） 5.ClickJacking（点击劫持） 6.HSTS（HTTP严格传输安全） 7.CND劫持,7,iframe,opener,CSRF（跨站请求伪造）,XSS（跨站脚本攻击）,ClickJacking（点击劫持）,HSTS（HTTP严格传输安全）,CND劫持,
+计算机网络安全原理章节 吴礼发-微信读书 1.绪论 2.密码学基础知识 3.认证与数学签名 4.PKI与数字证书 5.无线网络安全 6.IP和路由安全 7.传输层安全 8.DNS安全 9.web应用安全 10.电子邮件安全 11.拒绝服务攻击及防御 12.网络防火墙 13.入侵检测与网络欺骗 14.恶意代码 15.网络安全新技术,15,绪论,密码学基础知识,认证与数学签名,PKI与数字证书,无线网络安全,IP和路由安全,传输层安全,DNS安全,web应用安全,电子邮件安全,拒绝服务攻击及防御,网络防火墙,入侵检测与网络欺骗,恶意代码,网络安全新技术
+# https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy
+# XSS， cross-site-script(跨站脚本)
+# xss防御的主要方式？对输入
+# CSFR cross-site-request-forgery(跨站请求伪装)
+#COOKIE
+# COOKIE 组成部分
+# name 名字
+# - value 值
+# - expire/max-age 失效时间
+# - domain 域名
+# - path 路径
+# - httpOnly 是否只能请求设置
+# - secure
+# - sameSite
+# - priority

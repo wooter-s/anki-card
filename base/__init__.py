@@ -46,7 +46,7 @@ class EtractCsv:
         file_prefix = file_name_split[len(file_name_split) - 2]
         if file_prefix == QType.SELECT.value:
             print('操作选择题', file_name)
-            self._process_select(file_name)
+            self._handle_csv(input_path, output_path, self._process_select)
         if file_prefix == QType.FILL.value:
             print('操作填空题', file_name)
             self._handle_csv(input_path, output_path, self._process_fill)
@@ -70,26 +70,57 @@ class EtractCsv:
             else:
                 # 处理文件
                 self._dispatch_file_handle(file_name, file_path, output_path)
-    # def handle_file(self):
-    #     """
-    #     处理文件
-    #     """
-    #     with open(self.input_directory_path) as file:
-    #         csv_reader = csv.reader(file)
-    #         for row in csv_reader:
-    #             if row[1] == Q_type.SELECT:
-    #                 print(1)
 
-    def _process_select(self, file_path: str):
+    def _process_select(self, item: list) -> list:
         """
         处理选择题
         """
+        answer_key = item[3]
+        answer_index = self.get_index(answer_key)
+        answer = item[answer_index]
+        content = item[0]
+        if "______" in content:
+            content = content.replace("______", '{{c1::' + answer + '}}')
+        else:
+            content = content + '{{c1::' + answer + '}}'
+        answer_count = int(item[2])
+        # 答案放在第一个
+        dist_answer = '<div>' + answer + '</div>'
+        for index in range(4, 4 + answer_count, 1):
+            # 去掉答案重复的
+            if index == answer_index:
+                continue
+            dist_answer = dist_answer + '<div>' + item[index] + '</div>'
+        return [content, dist_answer]
 
-    def _process_fill(self, item):
+    def get_index(self, input):
+        """
+
+        :param input:
+        :return:
+        """
+        map = {
+            'A': 4,
+            'a': 4,
+            'B': 5,
+            'b': 5,
+            'C': 6,
+            'c': 6,
+            'D': 7,
+            'd': 7,
+            'E': 8,
+            'e': 8,
+            'F': 9,
+            'f': 9,
+        }
+        return map.get(input, None)
+
+    def _process_fill(self, item) -> list:
         """
         处理填空题
         """
-        answer_count: int = int(item[1])
+        print(f'item ----> {item}')
+        answer_count = int(item[1])
         result = item[0]
         for index in range(2, 2 + answer_count, 1):
             answer = item[index]
@@ -99,7 +130,7 @@ class EtractCsv:
             result = result.replace(answer, '{{c1' + '::' + answer + '}}')
         return [result]
 
-    def _process_question(self, item):
+    def _process_question(self, item) -> list:
         """
         处理问答题
         """
@@ -120,7 +151,3 @@ class EtractCsv:
                     dist_data_row = callback(item)
                     dist_write.writerow(dist_data_row)
                     # print(f'dist_data_row ----> {dist_data_row}')
-
-
-etc = EtractCsv('./data', './dist')
-etc.run()

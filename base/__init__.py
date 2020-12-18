@@ -49,9 +49,9 @@ class EtractCsv:
             self._process_select(file_name)
         if file_prefix == QType.FILL.value:
             print('操作填空题', file_name)
+            self._handle_csv(input_path, output_path, self._process_fill)
         if file_prefix == QType.QUESTION.value:
             print('操作问答题', file_name)
-            # self._process_question(input_path, output_path)
             self._handle_csv(input_path, output_path, self._process_question)
 
     def traverse_file(self, input_directory: str, output_directory: str):
@@ -85,12 +85,20 @@ class EtractCsv:
         处理选择题
         """
 
-    def _process_fill(self, file_path: str):
+    def _process_fill(self, item):
         """
         处理填空题
         """
+        answer_count: int = int(item[1])
+        result = item[0]
+        for index in range(2, 2 + answer_count, 1):
+            answer = item[index]
+            # 多张卡
+            # result = result.replace('{' + answer + '}', '{{c' + str(index) + '::' + answer + '}}')
+            # 一张卡
+            result = result.replace(answer, '{{c1' + '::' + answer + '}}')
+        return [result]
 
-    # def _process_question(self, file_path: str, output_path: str):
     def _process_question(self, item):
         """
         处理问答题
@@ -103,14 +111,15 @@ class EtractCsv:
 
     def _handle_csv(self, file_path: str, output_path: str, callback):
         with open(file_path, 'r') as file:
-            csv_reader = csv.reader(file)
-            with open(output_path, 'a+') as dist:
+            # 过滤掉csv备注的内容
+            # csv_reader = csv.reader(file)
+            csv_reader = csv.reader(filter(lambda row: row[0] != '#', file))
+            with open(output_path, 'w') as dist:
                 dist_write = csv.writer(dist)
                 for item in csv_reader:
                     dist_data_row = callback(item)
                     dist_write.writerow(dist_data_row)
-                    print(f'dist_data_row ----> {dist_data_row}')
-    # def handle
+                    # print(f'dist_data_row ----> {dist_data_row}')
 
 
 etc = EtractCsv('./data', './dist')

@@ -148,6 +148,9 @@ class EtractCsv:
             with open(output_path, 'w') as dist:
                 dist_write = csv.writer(dist)
                 for item in csv_reader:
+                    # 空行直接跳过
+                    if len(item) == 0:
+                        continue
                     dist_data_row = callback(item)
                     dist_write.writerow(dist_data_row)
                     # print(f'dist_data_row ----> {dist_data_row}')

@@ -1,0 +1,10 @@
+"COOKIE都有哪些属性
+name 名字
+value 值
+expire/max-age 失效时间
+domain 域名
+path 路径
+httpOnly 设置为true以后， 浏览器不能读写该key
+secure 只能在https中浏览器才会携带
+sameSite
+参考https://github.com/wooter-s/doc/tree/master",8,name,value,expire,domain,path,httpOnly,secure,sameSite

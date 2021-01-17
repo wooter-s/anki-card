@@ -1,0 +1,9 @@
+HPC,High Performance Computing 高性能计算
+ALU, arithmetic logic unit 算术逻辑单元
+CU, Control Unit 控制单元
+CPU, Central Processing Unit 中央处理器
+MDR, memory data register 数据寄存器
+MAR, memory address register 地址寄存器
+ACC,累加器，运算器中的寄存器的一种
+MQ,乘商寄存器
+X,操作数寄存器

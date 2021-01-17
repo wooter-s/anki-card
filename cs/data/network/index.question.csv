@@ -11,3 +11,5 @@ RTT?, Round Trip Time
 URL?,Uniform Resource Locator
 HTTP?, HyperText Transfer Protocal
 DNS?,Domain Name System
+FSM?,Finite State Machine有限状态自动机
+RPC?,Remote Procedure Call 远程过程调用
